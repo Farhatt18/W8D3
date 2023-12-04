@@ -5,7 +5,7 @@ class Clock {
     this.hour = current_time.getHours();
     this.minute = current_time.getMinutes();
     this.second = current_time.getSeconds();
-    setInterval(this._tick.bind(this), 0.5);
+    setInterval(this._tick.bind(this), 0.5); // refer to this line for myBind
   }
 
   printTime(){
