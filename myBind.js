@@ -1,8 +1,21 @@
-Function.prototype.myBind = function(context){
+Function.prototype.myBindES6 = function(context){ 
     return () => this.apply(context)
+    // return () => {
+    //     return that.call(context)
+    // }
+}
+
+Function.prototype.myBindES5 = function(context){ // myBind on the assessment MUST BE IN ES5 ==> shows you understand closures and invocation styles
+    let that = this // 'that' can be names anything
+
+    return function(){
+        return that.call(context);
+    }
 }
 
 // test
+
+
 
 class Lamp {
     constructor() {
